@@ -8,9 +8,6 @@
 */
 
 import router from '@adonisjs/core/services/router'
+import HelloWorldsController from '../app/controllers/hello_worlds_controller.js'
 
-router.get('/', async () => {
-  return {
-    hello: 'Content from the api',
-  }
-})
+router.get('/', [HelloWorldsController, 'index'])
