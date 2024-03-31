@@ -47,4 +47,11 @@ jobs:
         run: npm install
 
       - name: Run tests
+        env:
+          TZ: "UTC"
+          PORT: 3333
+          HOST: localhost
+          LOG_LEVEL: info
+          APP_KEY: hl5P3buIvNS-Xu0vf2ZsU9ItH7uQsz6M
+          NODE_ENV: ci
         run: npm test
