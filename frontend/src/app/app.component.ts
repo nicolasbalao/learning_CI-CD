@@ -15,7 +15,7 @@ type ApiRepsonse = {
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = 'test';
+  title = 'Hello, test';
   helloWorld$ = this.httpClient.get<ApiRepsonse>('http://localhost:3333/');
   constructor(private readonly httpClient: HttpClient) {}
 }
